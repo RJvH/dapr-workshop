@@ -1,5 +1,5 @@
 # dapr-workshop
-Dapr workshop
+This dapr and tye workshop consists of several assignments. The start of each assignment, is the end of the previous assignment. The start of each assignment can be found in the assignments folder as well, this way it's possible to start the workshop at every assignment.
 
 ## Prerequisites
 ### 0. Prepare prerequisites
