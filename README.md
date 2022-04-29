@@ -1,6 +1,8 @@
 # dapr-workshop
 Dapr workshop
 
+## 0. Prepare prerequisites
+- Copy folder structure from USB key to you hard drive
 
 ## 1. Run dapr init  
 - run ```dapr.exe uninstall``` first when upgrading dapr!  
@@ -10,9 +12,9 @@ Dapr workshop
 - ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
 
 ## 3. Install VS code extensions
-- tye https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-tye
-- redis client https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-redis-client
-- Rest Client https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+- [Tye plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-tye)
+- [database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2)
+- [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 
 ## 4. Powershell
