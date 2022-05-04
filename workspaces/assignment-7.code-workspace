@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "path": "../docs/",
+            "name": "docs"
+        },
+        {
+            "path": "../src/assignments/assignment-7",
+            "name": "final"
+        }        
+    ]
+}

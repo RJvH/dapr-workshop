@@ -44,7 +44,7 @@ services:
 #APIs
 - name: mailapi
   executable: powershell.exe 
-  args: -file "../../../Tools/bootstrap.ps1" ../src/assignments/final/MailApi mailapi 5200 3500 60400 ../src/dapr-configuration.yaml ../src/assignments/final/dapr-components default dotnet
+  args: -file "../../../Tools/bootstrap.ps1" ../src/assignments/assignment-4/MailApi mailapi 5200 3500 60400 ../src/dapr-configuration.yaml ../src/assignments/assignment-4/dapr-components default dotnet
   workingDirectory: .
   replicas: 1
   bindings:
@@ -53,7 +53,7 @@ services:
 
 - name: weatherapi
   executable: powershell.exe 
-  args: -file "../../../tools/bootstrap.ps1" ../src/assignments/final/WeatherApi weatherapi 5201 3501 60401 ../src/dapr-configuration.yaml ../src/assignments/final/dapr-components default dotnet
+  args: -file "../../../tools/bootstrap.ps1" ../src/assignments/assignment-4/WeatherApi weatherapi 5201 3501 60401 ../src/dapr-configuration.yaml ../src/assignments/assignment-4/dapr-components default dotnet
   workingDirectory: .
   replicas: 1
   bindings:
