@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "tye run tye.yaml",
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}/src/assignments/final/"
             },
             "dependsOn": [
                 "build"

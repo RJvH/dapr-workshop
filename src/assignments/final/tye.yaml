@@ -1,0 +1,61 @@
+name: dapr-workshop
+
+services:
+# Tools
+- name: consul
+  executable: ../../../tools/consul.exe 
+  args: agent --dev 
+  replicas: 1 
+  workingDirectory: ../../../tools/
+  bindings: 
+  - port: 8500
+    protocol: http
+
+- name: otel
+  executable: ../../../tools/otelcontribcol_windows_amd64.exe   
+  args: --config ../src/otel.yaml 
+  replicas: 1 
+  workingDirectory: ../../../tools/
+
+- name: jaeger
+  executable: ../../../tools/jaeger-all-in-one.exe
+  args: --config-file ../src/jaeger.yaml --log-level debug
+  replicas: 1 
+  workingDirectory: ../../../tools/
+  bindings:
+  - port: 16686
+    protocol: http
+
+- name: redis
+  executable: ../../../tools/redis-server.exe
+  args:
+  replicas: 1
+  workingDirectory: ../../../tools/
+
+- name: mailhog
+  executable: ../../../tools/MailHog_windows_amd64.exe
+  args:
+  replicas: 1
+  workingDirectory: ../../../tools/
+  bindings:
+  - port: 8025
+    protocol: http
+
+#APIs
+- name: mailapi
+  executable: powershell.exe 
+  args: -file "../../../Tools/bootstrap.ps1" ../src/assignments/final/MailApi mailapi 5200 3500 50400 ../src/dapr-configuration.yaml ../src/assignments/final/dapr-components default dotnet
+  workingDirectory: .
+  replicas: 1
+  bindings:
+  - protocol: http
+    port: 5200
+
+- name: weatherapi
+  executable: powershell.exe 
+  args: -file "../../../tools/bootstrap.ps1" ../src/assignments/final/WeatherApi weatherapi 5201 3501 50401 ../src/dapr-configuration.yaml ../src/assignments/final/dapr-components default dotnet
+  workingDirectory: .
+  replicas: 1
+  bindings:
+  - protocol: http
+    port: 5201
