@@ -1,4 +1,11 @@
-# dapr-workshop
+# Dapr workshop
+
+This dapr workshop focuses on setting op a micro-micro-services architecture running on your local computer without having the need to setup a local kubernetes cluster and can be run without docker. To support this setup, several services are needed to setup the mesh....
+
+TODO: add explaination
+
+## Workshop approach
+
 This dapr and tye workshop consists of several assignments. The start of each assignment, is the end of the previous assignment. The start of each assignment can be found in the assignments folder as well, this way it's possible to start the workshop at every assignment.
 
 ## Prerequisites
