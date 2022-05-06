@@ -58,42 +58,32 @@ Install powershell
 ## Assignments
 
 ### [Assignment 1: Create Tye bootstrap](./docs/assignment-1.md)
-- Open the assignment 1 workspace from the workspaces folder using the File>Open Workspace From File option in VSCode.
-- Create tye yaml
-- Run services
-    - consul
-    - opentelemetry collector
-    - Jaeger
-    - Redis
-    - Mailhog
-- check dashboards
-    - consul
-    - tye
-    - mailhog
-    - jaeger
+In this assignment we will create the solution outline. We will create a Tye YAML file with a set of defined services to start.
 
-### Assignment 2 : Create the Mail API
-- create empty .NET 6 project
-- create minimal API
-- add health check on /health endpoint
-- create POST cronjob endpoint
-- run the MaiApi using dotnet run
+After this assignment we
+- know how te define and run 'executables' from within Project Tye
 
-### Assignment 3 : DAPRize the Mail API
-- add DAPR components folder
-    - add cron input binding
-    - add smtp output binding
-    - add secret store compponent
-    - add secrets file
-- run Mail API from TYE using bootstrap powershell
-    - name the DAPR app : mailapi
-- call DAPR smtp output binding from cronjob endpoint using a DAPR Client
-- add http test file
-    - test cronjob endpoint
-- check dashboards
-    - consul
-    - tye
-    - jaeger
+### [Assignment 2 : Create the Mail API](./docs/assignment-2.md)
+In this assignment we will create a .NET6 minimal Web Api.
+
+After this assignment we
+- know how to create a new .NET6 minimal Web Api project
+- how to create a POST operation on this Api
+- how to run the Api from VS Code
+- how to check the OpenApi swagger page and test the API
+
+### [Assignment 3 : DAPRize the Mail API](./docs/assignment-3.md)
+In this assignment we will 'DAPRize' the Mail API and run it from Tye.
+
+After this assignment we 
+- know how to create/add DAPR components
+    - create input and output bindings
+    - create secret store with a secrets file
+- know how to run this Api from Tye
+- know how to trigger the Web Api operation using the DAPR input binding
+- know how to call the DAPR output binding to send an email
+- know how we can test HTTP endpoints using the RestClient VS Code extension
+
 
 ### Assignment 4 : Create the Weather API
 - create default .NET 6 weather API project
