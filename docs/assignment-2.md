@@ -1,3 +1,3 @@
 # Assignment 2
-
-The purpose of assignment 2 
+## Goal
+## Steps
