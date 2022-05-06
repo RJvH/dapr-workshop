@@ -4,7 +4,7 @@ services:
 # Tools
 
 #- name: example
-#  executable: ../../../tools/example.exe 
+#  executable: ../../../tools/<example>.exe 
 #  args: <put-your-arguments-here>
 #  replicas: 1 
 #  workingDirectory: ../../../tools/
