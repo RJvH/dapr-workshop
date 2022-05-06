@@ -77,6 +77,7 @@ Install powershell
 - create minimal API
 - add health check on /health endpoint
 - create POST cronjob endpoint
+- run the MaiApi using dotnet run
 
 ### Assignment 3 : DAPRize the Mail API
 - add DAPR components folder
