@@ -31,7 +31,7 @@ Make sure that:
 - the working directory of each service is: ```../../../tools/```
 - replicas is set to: ```1```
 
-An example 'exectuable' Tye service:
+An example 'executable' Tye service:
 
 ```yaml
 services:
@@ -45,7 +45,7 @@ services:
     protocol: http
 ```
 
-Now run Tye pressing F5 or chooes 'Launch Tye' on the 'Run an Debug' window (Ctrl-Shift-D)
+Now run Tye pressing F5 or choose 'Launch Tye' on the 'Run an Debug' window (Ctrl-Shift-D)
 
 ### Step 2.
 Open your browser and go to the Tye dashboard: http://127.0.0.1:8000/
@@ -71,3 +71,5 @@ The services running in Tye and the links to http bindings and logs can also be 
 ![tye extension](../docs/images/assignment1_tye_extension.png)
 
 When hovering over the dapr-workshop Tye application can click on the 'meter cog' to access the Tye dashboard. When hovering over a service you will see two icons with a link appear: one the according dashboard and one the according logs.
+
+Congrats! You now have a working base solution outline for running distributed applications!
