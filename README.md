@@ -57,7 +57,7 @@ Install powershell
 
 ## Assignments
 
-### Assignment 1: Create Tye bootstrap 
+### [Assignment 1: Create Tye bootstrap](./docs/assignment-1.md)
 - Open the assignment 1 workspace from the workspaces folder using the File>Open Workspace From File option in VSCode.
 - Create tye yaml
 - Run services
