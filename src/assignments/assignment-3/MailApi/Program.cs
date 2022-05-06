@@ -20,28 +20,10 @@ if (app.Environment.IsDevelopment())
 
 app.MapPost("/cronmail", async () =>
 {
-    var daprClient = new DaprClientBuilder().Build();
-    var metadata = new Dictionary<string, string>
-    {
-        ["emailFrom"] = "noreply@dapr-workshop.local",
-        ["emailTo"] = "john.doe@dapr-worksip.local",
-        ["subject"] = $"Mail from cron job"
-    };
-    
-
-    var result = await daprClient.InvokeMethodAsync<IEnumerable<WeatherForecast>>(HttpMethod.Get, "weatherapi", "weatherforecast");
-
-    string body = $"Wow, it's {result.FirstOrDefault().Summary}!";
-
-    await daprClient.InvokeBindingAsync("dapr-smtp", "create", body, metadata);
+    return "Working!";
 })
 .WithName("cronmail");
 
 app.MapHealthChecks("/health");
 
 app.Run();
-
-internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
