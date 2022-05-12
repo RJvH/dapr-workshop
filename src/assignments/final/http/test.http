@@ -27,6 +27,12 @@ Content-Type: application/json
 
 GET http://localhost:3500/v1.0/secrets/dapr-secrets/smtp.user HTTP/1.1
 
+#### test secret dapr
+GET http://localhost:3500/v1.0/secrets/envvar-secret-store/bulk HTTP/1.1
+
+#### test secret dapr
+GET http://localhost:3500/v1.0/secrets/envvar-secret-store/smtp.user HTTP/1.1
+
 
 
 ### test state store
