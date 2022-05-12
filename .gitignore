@@ -39,3 +39,4 @@ logs.json
 otelcontribcol_windows_amd64.exe
 consul.exe
 process_store
+vault.exe
