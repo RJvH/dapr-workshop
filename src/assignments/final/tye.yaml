@@ -10,6 +10,8 @@ services:
   bindings: 
   - port: 8500
     protocol: http
+  env: 
+  - SMTP.USER=bas2
 
 - name: otel
   executable: ../../../tools/otelcontribcol_windows_amd64.exe   
@@ -50,6 +52,10 @@ services:
   bindings:
   - protocol: http
     port: 5200
+  # env: 
+  # - SMTP.USER=user
+  # - SMTP.Password=password
+    
 
 - name: weatherapi
   executable: powershell.exe 
@@ -59,3 +65,5 @@ services:
   bindings:
   - protocol: http
     port: 5201
+  env:
+  - SMTP.USER=bas4
