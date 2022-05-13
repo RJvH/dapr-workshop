@@ -50,12 +50,3 @@ services:
   bindings:
   - protocol: http
     port: 5200
-
-- name: weatherapi
-  executable: powershell.exe 
-  args: -file "../../../tools/bootstrap.ps1" ../src/assignments/assignment-4/WeatherApi weatherapi 5201 3501 60401 ../src/dapr-configuration.yaml ../src/assignments/assignment-4/dapr-components default dotnet
-  workingDirectory: .
-  replicas: 1
-  bindings:
-  - protocol: http
-    port: 5201
