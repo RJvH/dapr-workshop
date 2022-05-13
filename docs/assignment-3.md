@@ -190,8 +190,3 @@ Check the dashboard of:
 
 You can see that emails are received from the cron job AND the REST client extension
  ![mailhog](../docs/images/assignment3_mailhog.png)
-
-- check dashboards
-    - consul
-    - tye
-    - jaeger
