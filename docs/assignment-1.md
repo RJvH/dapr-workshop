@@ -1,6 +1,6 @@
 # Assignment 1
 ## Goal
-The purpose of this assignment  is to setup a working set of services which are prerequisites in order to be able to create microservices. 
+The purpose of this assignment is to setup a working set of services which are prerequisites in order to be able to create microservices. 
 
 The following services will be setup:
 
@@ -23,7 +23,6 @@ Start the following executalabes from the tools directory by defining them as a 
 |consul|```agent --dev```|8500|
 |otel|```--config ../src/otel.yaml```|n/a|
 |jaeger|```--config-file ../src/jaeger.yaml --log-level debug```|16686|
-|redis|n/a|n/a|
 |mailhog|n/a|8025|
 
 Make sure that:
@@ -45,7 +44,7 @@ services:
     protocol: http
 ```
 
-Now run Tye pressing F5 or choose 'Launch Tye' on the 'Run an Debug' window (Ctrl-Shift-D)
+Now run by Tye pressing F5 or choose 'Launch Tye' on the 'Run an Debug' window (Ctrl-Shift-D)
 
 ### Step 2.
 Open your browser and go to the Tye dashboard: http://127.0.0.1:8000/
@@ -71,5 +70,7 @@ The services running in Tye and the links to http bindings and logs can also be 
 ![tye extension](../docs/images/assignment1_tye_extension.png)
 
 When hovering over the dapr-workshop Tye application can click on the 'meter cog' to access the Tye dashboard. When hovering over a service you will see two icons with a link appear: one the according dashboard and one the according logs.
+
+![tye extension](../docs/images/assignment1_tye_extension_browse.png)
 
 Congrats! You now have a working base solution outline for running distributed applications!

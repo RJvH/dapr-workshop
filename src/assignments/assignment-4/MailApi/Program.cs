@@ -17,6 +17,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.MapHealthChecks("/health");
 
 app.MapPost("/cronmail", async () =>
 {
@@ -37,7 +38,7 @@ app.MapPost("/cronmail", async () =>
 })
 .WithName("cronmail");
 
-app.MapHealthChecks("/health");
+
 
 app.Run();
 

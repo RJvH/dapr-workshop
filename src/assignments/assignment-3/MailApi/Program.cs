@@ -1,5 +1,3 @@
-using Dapr.Client;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,13 +15,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.MapHealthChecks("/health");
 
 app.MapPost("/cronmail", async () =>
 {
     return "Working!";
 })
 .WithName("cronmail");
-
-app.MapHealthChecks("/health");
 
 app.Run();
