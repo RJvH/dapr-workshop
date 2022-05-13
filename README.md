@@ -96,12 +96,12 @@ After this assignment we
 - know how to call the DAPR output binding to send an email
 - know how we can test HTTP endpoints using the RestClient VS Code extension
 
-### Assignment 4 : Create the Weather API
+### [Assignment 4 : Create the Weather API](./docs/assignment-4.md)
 
 - create default .NET 6 weather API project
   - add health check on /health endpoint
 
-### Assignment 5 : DAPRize the Weather API
+### [Assignment 5 : DAPRize the Weather API](./docs/assignment-5.md)
 
 - run Weather API from TYE using bootstrap powershell
   - name the DAPR app : weatherapi
@@ -109,7 +109,7 @@ After this assignment we
   - consul
   - tye
 
-### Assignment 6 : Call the Weather API from the MAIL API
+### [Assignment 6 : Call the Weather API from the MAIL API](./docs/assignment-6.md)
 
 - add weatherforecast record to mail api
 - call weatherapi from mail api using DAPR service invocation

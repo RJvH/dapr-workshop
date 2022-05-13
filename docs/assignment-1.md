@@ -1,6 +1,11 @@
 # Assignment 1
+
 ## Goal
-The purpose of this assignment is to setup a working set of services which are prerequisites in order to be able to create microservices. 
+In this assignment we will create the solution outline. We will create a Tye YAML file with a set of defined services to start.
+
+After this assignment we
+
+- know how te define and run 'executables' from within Project Tye
 
 The following services will be setup:
 
@@ -12,10 +17,10 @@ The following services will be setup:
 ## Steps
 
 ### Prerequisite
+- Open VS Code
+- Open the assignment-1 VS Code workspace from the workspaces folder using "File > Open Workspace from File"
 
-Open the assignment-1 VS Code workspace in the workspaces folder
-
-### Step 1.
+### Step 1. Add services to Tye and run them
 Start the following executalabes from the tools directory by defining them as a service in the tye.yaml file.
 
 | name | arguments | http port |
@@ -46,25 +51,26 @@ services:
 
 Now run by Tye pressing F5 or choose 'Launch Tye' on the 'Run an Debug' window (Ctrl-Shift-D)
 
-### Step 2.
+### Step 2. Inspect the Tye dashboard
+
 Open your browser and go to the Tye dashboard: http://127.0.0.1:8000/
 
 You wil see:
 ![tye services](../docs/images/assignment1_tye_services.png)
 
-### Step 3.
+### Step 3. Inspect the Consul, Jaeger and MailHog dashboards
 Click on each "Bindings" link and check:
 - Consul dashboard : http://localhost:8500/
 - Jaeger dashboard  : http://localhost:16686/
 - MailHog dashboard : http://localhost:8025/
 
-### Step 4.
+### Step 4. Inspect the logs
 Click on each "Logs" link and check the  output of each service:
 - Consul logs : http://127.0.0.1:8000/logs/consul
 - Jaeger logs : http://127.0.0.1:8000/logs/jaeger
 - MailHog logs : http://127.0.0.1:8000/logs/mailhog
 
-### Step 5.
+### Step 5. Use the VS Code Tye extension
 The services running in Tye and the links to http bindings and logs can also be accessed using the VS Code Tye Extension:
 
 ![tye extension](../docs/images/assignment1_tye_extension.png)

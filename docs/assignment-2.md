@@ -2,13 +2,21 @@
 
 ## Goal
 
-The purpose of this assignment is to create a Mail API with a health and cron job endpoint.
+In this assignment we will create a .NET6 minimal Web Api.
+
+After this assignment we
+
+- know how to create a new .NET6 minimal Web Api project
+- how to create a POST operation on this Api
+- how to run the Api from VS Code
+- how to check the OpenApi swagger page and test the API
 
 ## Steps
 
 ### Prerequisite
 
-Open the assignment-2 VS Code workspace in the workspaces folder
+- Open VS Code
+- Open the assignment-2 VS Code workspace from the workspaces folder using "File > Open Workspace from File"
 
 ### Step 1.
 
@@ -79,14 +87,45 @@ app.MapHealthChecks("/health");
 ```
 
 
-### Step 4. Create the POST cronjob endpoint
-
+### Step 4. Create the POST cronmail endpoint
+Add the POST cronnail operation
 ```c#
 app.MapPost("/cronmail", async () =>
 {
     return "Working!";
 })
 .WithName("cronmail");
+```
+
+The final Program.cs file will now be:
+
+```c#
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddHealthChecks();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+app.MapHealthChecks("/health");
+
+app.MapPost("/cronmail", async () =>
+{
+    return "Working!";
+})
+.WithName("cronmail");
+
+app.Run();
 ```
 
 ### Step 5. Run the MailApi
