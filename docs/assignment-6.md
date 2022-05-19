@@ -2,12 +2,12 @@
 
 ## Goal
 
-In this assignment we will use the DAPR Service Invocation building block to call a the WeatherApi service from the MailApi service.
+In this assignment we will use the Dapr Service Invocation building block to call a the WeatherApi service from the MailApi service.
 
 After this assignment we know
 
 - how to add the weatherforecast return type record 
-- how we can call the weatherapi from the mailapi using the DAPR SDK and the service invocation building block
+- how we can call the weatherapi from the mailapi using the Dapr SDK and the service invocation building block
 - how to get a forecast from the result and put it in the mail to be sent
 
 ## Steps
@@ -31,7 +31,7 @@ internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary
 
 ### Step 2. Call the WeatherApi from the MailApi cronmail endpoint
 
-Within the cronmail operation use the DAPR client to invoke the "weatherforecast" method on the "weatherapi" app using a GET.
+Within the cronmail operation use the Dapr client to invoke the "weatherforecast" method on the "weatherapi" app using a GET.
 
 Add this line of code underneath the metaData initialization:
 ```c#

@@ -121,7 +121,7 @@ Add the following using statement:
 using Dapr.Client;
 ```
 
-Change the cronmail endpoint so it sends an email using the DAPR output binding:
+Change the cronmail endpoint so it sends an email using the Dapr output binding:
 ```c#
 app.MapPost("/cronmail", async () =>
 {
@@ -147,12 +147,12 @@ Press F5 :)
 Create a new 'test.http' file in your 'src' folder
 
 Add two http tests to this file:
-1. test cronmail using DAPR service invocation
+1. test cronmail using Dapr service invocation
 ```http
 ### test cronmail service invocation
 POST http://localhost:3500/v1.0/invoke/mailapi/method/cronmail HTTP/1.1
 ```
-2. test DAPR smtp output binding
+2. test Dapr smtp output binding
 ```http
 ### test smtp output binding
 POST http://localhost:3500/v1.0/bindings/dapr-smtp HTTP/1.1
@@ -178,7 +178,7 @@ Within VS Code you will see a 'Send Request' button rendered above each test:
 Execute both tests and check the results.
 
 ### Step 7. Check the dashboards
-Every minute DAPR will execute the cron job. It invokes the input binding which executes our cronmail endpoint. This endpoint creates an email and sends it using the DAPR SMTP outpub binding to MailHog.
+Every minute Dapr will execute the cron job. It invokes the input binding which executes our cronmail endpoint. This endpoint creates an email and sends it using the Dapr SMTP outpub binding to MailHog.
 
 Check the dashboard of:
 - Consul on http://127.0.0.1:8500/ 
@@ -189,15 +189,15 @@ You can see that consul and mailapi are correctly running
 
 - MailApi logs in the Tye Dashboard on http://127.0.0.1:8000/logs/mailapi
 
-You can see that dapr and mailapi are running and that the cron job is invoking the cronmail operation (after 1 minute, and then each minute).
-You also see that the cronmail operation is invoking the DAPR SMTP output binding.
+You can see that Dapr and mailapi are running and that the cron job is invoking the cronmail operation (after 1 minute, and then each minute).
+You also see that the cronmail operation is invoking the Dapr SMTP output binding.
 
 ![mailapi](../docs/images/assignment3_mailapi.png)
 
 - Jaeger on http://127.0.0.1:16686/
 
 
-In Jaeger UI you can the cronmail endpoint call by the DAPR cron job. You also see the call to the DAPR smtp output binding by the cronmail endpoint.
+In Jaeger UI you can the cronmail endpoint call by the Dapr cron job. You also see the call to the Dapr SMTP output binding by the cronmail endpoint.
 
 ![jaeger](../docs/images/assignment3_jaeger.png)
 

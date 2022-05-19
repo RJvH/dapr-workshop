@@ -1,14 +1,14 @@
 # Dapr workshop
 
-This dapr workshop focuses on setting op a micro-services architecture running on your local computer using Project Tye and DAPR without having the need to setup a local kubernetes cluster and can be run without docker. 
+This Dapr workshop focuses on setting op a micro-services architecture running on your local computer using Project Tye and Dapr without having the need to setup a local kubernetes cluster and can be run without docker. 
 
-In this workshop you will be using the following DAPR building blocks:
+In this workshop you will be using the following Dapr building blocks:
 
 - Service Invocation
 - Bindings
 - Secrets Management
 
-We will use Tye to run all components, including the DAPR sidecars, the workloads and all other supporting services.
+We will use Tye to run all components, including the Dapr sidecars, the workloads and all other supporting services.
 
 After having done all assigments, the final state of this workhop will be:
 
@@ -107,8 +107,8 @@ After this assignment we know
   - create input and output bindings
   - create secret store with a secrets file
 - how to run this Api from Tye
-- how to trigger the Web Api operation using the DAPR input binding
-- how to call the DAPR output binding to send an email
+- how to trigger the Web Api operation using the Dapr input binding
+- how to call the Dapr output binding to send an email
 - how we can test HTTP endpoints using the RestClient VS Code extension
 
 ### [Assignment 4 : Create the Weather API](./docs/assignment-4.md)
@@ -132,11 +132,11 @@ After this assignment we know
 
 ### [Assignment 6 : Call the Weather API from the Mail API](./docs/assignment-6.md)
 
-In this assignment we will use the DAPR Service Invocation building block to call a the WeatherApi service from the MailApi service.
+In this assignment we will use the Dapr Service Invocation building block to call a the WeatherApi service from the MailApi service.
 
 After this assignment we know
 
 - how to add the weatherforecast return type record 
-- how we can call the weatherapi from the mailapi using the DAPR SDK and the service invocation building block
+- how we can call the weatherapi from the mailapi using the Dapr SDK and the service invocation building block
 - how to get a forecast from the result and put it in the mail to be sent
 

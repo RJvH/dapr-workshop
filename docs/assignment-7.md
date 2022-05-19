@@ -2,10 +2,10 @@
 
 ## Goal
 
-In this assignment we will swap the DAPR secrets component
+In this assignment we will swap the Dapr secrets component
 
 After this assignment we know
-- how to swap a DAPR component without changing the application code
+- how to swap a Dapr component without changing the application code
 
 ## Steps
 

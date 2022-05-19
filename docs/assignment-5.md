@@ -40,9 +40,9 @@ Press F5 :)
 ### Step 3. Test endpoints using REST Client extension
 
 Add two http tests to the test.http file:
-1. test weatherforecast DAPR service invocation
+1. test weatherforecast Dapr service invocation
 ```http
-### test weatherforecast DAPR service invocation
+### test weatherforecast Dapr service invocation
 GET http://localhost:3501/v1.0/invoke/weatherapi/method/weatherforecast HTTP/1.1
 ```
 2. test direct weatherforecast invocation
