@@ -130,7 +130,7 @@ After this assignment we know
 - how to run this Api from Tye
 - how we can test HTTP endpoints using the RestClient VS Code extension
 
-### [Assignment 6 : Call the Weather API from the MAIL API](./docs/assignment-6.md)
+### [Assignment 6 : Call the Weather API from the Mail API](./docs/assignment-6.md)
 
 In this assignment we will use the DAPR Service Invocation building block to call a the WeatherApi service from the MailApi service.
 
