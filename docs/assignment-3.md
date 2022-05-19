@@ -4,15 +4,15 @@
 
 In this assignment we will 'DAPRize' the Mail API and run it from Tye.
 
-After this assignment we
+After this assignment we know
 
-- know how to create/add DAPR components
+- how to create/add DAPR components
   - create input and output bindings
   - create secret store with a secrets file
-- know how to run this Api from Tye
-- know how to trigger the Web Api operation using the DAPR input binding
-- know how to call the DAPR output binding to send an email
-- know how we can test HTTP endpoints using the RestClient VS Code extension
+- how to run this Api from Tye
+- how to trigger the Web Api operation using the DAPR input binding
+- how to call the DAPR output binding to send an email
+- how we can test HTTP endpoints using the RestClient VS Code extension
 
 ## Steps
 
@@ -183,9 +183,24 @@ Every minute DAPR will execute the cron job. It invokes the input binding which 
 Check the dashboard of:
 - Consul on http://127.0.0.1:8500/ 
 
+You can see that consul and mailapi are correctly running
+
 ![consul](../docs/images/assignment3_consul.png)
-- Tye on http://127.0.0.1:8000/ 
+
+- MailApi logs in the Tye Dashboard on http://127.0.0.1:8000/logs/mailapi
+
+You can see that dapr and mailapi are running and that the cron job is invoking the cronmail operation (after 1 minute, and then each minute).
+You also see that the cronmail operation is invoking the DAPR SMTP output binding.
+
+![mailapi](../docs/images/assignment3_mailapi.png)
+
 - Jaeger on http://127.0.0.1:16686/
+
+
+In Jaeger UI you can the cronmail endpoint call by the DAPR cron job. You also see the call to the DAPR smtp output binding by the cronmail endpoint.
+
+![jaeger](../docs/images/assignment3_jaeger.png)
+
 - Mailhog on http://localhost:8025/
 
 You can see that emails are received from the cron job AND the REST client extension

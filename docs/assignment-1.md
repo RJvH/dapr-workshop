@@ -3,9 +3,9 @@
 ## Goal
 In this assignment we will create the solution outline. We will create a Tye YAML file with a set of defined services to start.
 
-After this assignment we
+After this assignment we know
 
-- know how te define and run 'executables' from within Project Tye
+- how te define and run 'executables' from within Project Tye
 
 The following services will be setup:
 

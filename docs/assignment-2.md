@@ -4,9 +4,9 @@
 
 In this assignment we will create a .NET6 minimal Web Api.
 
-After this assignment we
+After this assignment we know
 
-- know how to create a new .NET6 minimal Web Api project
+- how to create a new .NET6 minimal Web Api project
 - how to create a POST operation on this Api
 - how to run the Api from VS Code
 - how to check the OpenApi swagger page and test the API
@@ -20,7 +20,7 @@ After this assignment we
 
 ### Step 1.
 
-Lets open a terminal. 
+Let's open a terminal. 
 Right click in the 'src' folder and choose 'Open in Integrated Terminal'
 
 ![open terminal](../docs/images/assignment2_open_terminal.png)
@@ -32,7 +32,7 @@ A new terminal window (propably Powershell) will be opened with 'assignment-2' a
 
 Create a new empty ASP.NET Project with the name 'MailApi' using this command from the terminal:
 
-```dotnet new web -n MailApi```
+```dotnet new web -n MailApi --kestrelHttpPort 5200```
 
 The project will be scaffolded:
 
@@ -43,21 +43,6 @@ Now add the package reference using this command from the terminal:
 ```dotnet add MailApi package Swashbuckle.AspNetCore```
 
 ![open terminal](../docs/images/assignment2_add_swashbuckle.png)
-
-Open the MailApi/Properties/launchSettings.json file and change the MailApi profile so the "applicationUrl" ports are set to 7138 (https) and 5200 (http):
-
-```json
-"profiles": {
-    "MailApi": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "applicationUrl": "https://localhost:7138;http://localhost:5200",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    }
-```
 
 ### Step 3. Add Swagger and Health endpoint
 

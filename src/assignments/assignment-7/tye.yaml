@@ -26,12 +26,6 @@ services:
   - port: 16686
     protocol: http
 
-- name: redis
-  executable: ../../../tools/redis-server.exe
-  args:
-  replicas: 1
-  workingDirectory: ../../../tools/
-
 - name: mailhog
   executable: ../../../tools/MailHog_windows_amd64.exe
   args:

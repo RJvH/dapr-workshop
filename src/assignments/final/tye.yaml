@@ -14,7 +14,7 @@ services:
   - SMTP.USER=bas2
 
 - name: otel
-  executable: ../../../tools/otelcontribcol_windows_amd64.exe   
+  executable: ../../../tools/otelcol-contrib.exe   
   args: --config ../src/otel.yaml 
   replicas: 1 
   workingDirectory: ../../../tools/
@@ -36,3 +36,22 @@ services:
   bindings:
   - port: 8025
     protocol: http
+
+#APIs
+- name: mailapi
+  executable: powershell.exe 
+  args: -file "../../../Tools/bootstrap.ps1" ../src/assignments/final/MailApi mailapi 5200 3500 60400 ../src/dapr-configuration.yaml ../src/assignments/final/dapr-components default dotnet
+  workingDirectory: .
+  replicas: 1
+  bindings:
+  - protocol: http
+    port: 5200
+
+- name: weatherapi
+  executable: powershell.exe 
+  args: -file "../../../tools/bootstrap.ps1" ../src/assignments/final/WeatherApi weatherapi 5201 3501 60401 ../src/dapr-configuration.yaml ../src/assignments/final/dapr-components default dotnet
+  workingDirectory: .
+  replicas: 1
+  bindings:
+  - protocol: http
+    port: 5201

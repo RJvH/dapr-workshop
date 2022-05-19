@@ -12,7 +12,7 @@ services:
     protocol: http
 
 - name: otel
-  executable: ../../../tools/otelcontribcol_windows_amd64.exe   
+  executable: ../../../tools/otelcol-contrib.exe   
   args: --config ../src/otel.yaml 
   replicas: 1 
   workingDirectory: ../../../tools/

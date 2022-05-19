@@ -39,7 +39,21 @@ This dapr and tye workshop consists of several assignments. The start of each as
 
 ### 0. Prepare prerequisites
 
+#### Workshop with USB key
 - Copy folder structure from USB key to you hard drive
+
+#### Workshop without USB key
+- Clone this repo
+- Download the following tools and unzip/copy these executables into the Tools folder; your tools folder should look like this:
+
+![tools folder](./docs/images/prereq_folder_tools.png)
+
+- Consul: https://www.consul.io/downloads (Download the latest Amd64 release zip file)
+- Dapr: https://github.com/dapr/cli/releases (Download the latest dapr_windows_amd64.zip file)
+- Jaeger: https://www.jaegertracing.io/download/ (Click on the Windows button within the Binaries section and download the tar.gz file)
+- MailHog: https://github.com/mailhog/MailHog/releases (Download the latest MailHog_windows_amd64.exe file)
+- Otel: https://github.com/open-telemetry/opentelemetry-collector-releases/releases/ (Download the latest otelcol-contrib tar.gz file )
+
 
 ### 1. Run dapr init
 
@@ -67,7 +81,7 @@ Install powershell
 
 In this assignment we will create the solution outline. We will create a Tye YAML file with a set of defined services to start.
 
-After this assignment we
+After this assignment we know
 
 - know how te define and run 'executables' from within Project Tye
 
@@ -75,9 +89,10 @@ After this assignment we
 
 In this assignment we will create a .NET6 minimal Web Api.
 
-After this assignment we
+After this assignment we know
 
-- know how to create a new .NET6 minimal Web Api project
+- how to create a new .NET6 minimal Web Api project
+- how to add Health end Swagger endpoints
 - how to create a POST operation on this Api
 - how to run the Api from VS Code
 - how to check the OpenApi swagger page and test the API
@@ -86,20 +101,25 @@ After this assignment we
 
 In this assignment we will 'DAPRize' the Mail API and run it from Tye.
 
-After this assignment we
+After this assignment we know
 
-- know how to create/add DAPR components
+- how to create/add DAPR components
   - create input and output bindings
   - create secret store with a secrets file
-- know how to run this Api from Tye
-- know how to trigger the Web Api operation using the DAPR input binding
-- know how to call the DAPR output binding to send an email
-- know how we can test HTTP endpoints using the RestClient VS Code extension
+- how to run this Api from Tye
+- how to trigger the Web Api operation using the DAPR input binding
+- how to call the DAPR output binding to send an email
+- how we can test HTTP endpoints using the RestClient VS Code extension
 
 ### [Assignment 4 : Create the Weather API](./docs/assignment-4.md)
 
-- create default .NET 6 weather API project
-  - add health check on /health endpoint
+In this assignment we will create a default WeatherForecast .NET6 minimal Web Api.
+
+After this assignment we know
+
+- how to create a new .NET6 minimal Web Api project
+- how to run the Api from VS Code
+- how to check the OpenApi swagger page and test the API
 
 ### [Assignment 5 : DAPRize the Weather API](./docs/assignment-5.md)
 
