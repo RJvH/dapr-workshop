@@ -10,6 +10,8 @@ In this workshop you will be using the following Dapr building blocks:
 
 We will use Tye to run all components, including the Dapr sidecars, the workloads and all other supporting services.
 
+We will create two micro services: a Mail Api and a Weather API where the first will be triggered by Dapr using a cron job and it will call the second using Dapr service invocation.
+
 After having done all assigments, the final state of this workhop will be:
 
 ![architecture](./docs/images/architecture.excalidraw.svg)
@@ -31,9 +33,11 @@ After having done all assigments, the final state of this workhop will be:
 8. [OpenTelemetry Collector Exporter](https://opentelemetry.io/docs/collector/configuration/#exporters)
     The OpenTelemetry Collector will send all received traces to Jaeger
 
+
+
 ## Workshop approach
 
-This dapr and tye workshop consists of several assignments. The start of each assignment, is the end of the previous assignment. The start of each assignment can be found in the assignments folder as well, this way it's possible to start the workshop at every assignment.
+This Dapr and Tye workshop consists of several assignments. The start of each assignment, is the end of the previous assignment. The start of each assignment can be found in the assignments folder as well, this way it's possible to start the workshop at every assignment.
 
 ## Prerequisites
 
