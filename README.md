@@ -14,19 +14,19 @@ After having done all assigments, the final state of this workhop will be:
 
 ![architecture](./docs/images/architecture.excalidraw.svg)
 
-1. [DAPR Service Invocation](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/)
+1. [Dapr Service Invocation](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/)
     We will use a synchronous service invocation from the MailApi to the WeatherApi using the Service Invocation Building block
-2. [DAPR Secrets Management](https://docs.dapr.io/developing-applications/building-blocks/secrets/)
+2. [Dapr Secrets Management](https://docs.dapr.io/developing-applications/building-blocks/secrets/)
     We will retrieve secrets using Secrets Management and will swap the secret store being used
-3. [DAPR Consul name resolution](https://docs.dapr.io/reference/components-reference/supported-name-resolution/setup-nr-consul/)
+3. [Dapr Consul name resolution](https://docs.dapr.io/reference/components-reference/supported-name-resolution/setup-nr-consul/)
     Dapr will register the workload service using the Consul name resolition component
-4. [DAPR Distributed Tracing](https://docs.dapr.io/developing-applications/building-blocks/observability/tracing-overview/)
+4. [Dapr Distributed Tracing](https://docs.dapr.io/developing-applications/building-blocks/observability/tracing-overview/)
     We will configure DAPR to use zipkin formatted traces and send them to the OpenTelemetry Collector
-5. [DAPR Input Bindings](https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/)
+5. [Dapr Input Bindings](https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/)
     We will use the DAPR cron input binding to trigger calls to the MailApi service
 6. [Consul checks](https://www.consul.io/docs/discovery/checks)
     Consul will frequently check the health of all registered services
-7. [DAPR Output Bindings](https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/)
+7. [Dapr Output Bindings](https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/)
     We will use the DAPR SMTP output binding to send an email
 8. [OpenTelemetry Collector Exporter](https://opentelemetry.io/docs/collector/configuration/#exporters)
     The OpenTelemetry Collector will send all received traces to Jaeger
