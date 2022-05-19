@@ -27,8 +27,7 @@ app.MapPost("/cronmail", async () =>
         ["emailFrom"] = "noreply@dapr-workshop.local",
         ["emailTo"] = "john.doe@dapr-worksip.local",
         ["subject"] = $"Mail from cron job"
-    };
-    
+    };  
 
     var result = await daprClient.InvokeMethodAsync<IEnumerable<WeatherForecast>>(HttpMethod.Get, "weatherapi", "weatherforecast");
 

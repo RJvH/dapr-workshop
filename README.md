@@ -123,16 +123,20 @@ After this assignment we know
 
 ### [Assignment 5 : DAPRize the Weather API](./docs/assignment-5.md)
 
-- run Weather API from TYE using bootstrap powershell
-  - name the DAPR app : weatherapi
-- check dashboards
-  - consul
-  - tye
+In this assignment we will 'DAPRize' the Weather API and run it from Tye.
+
+After this assignment we know
+
+- how to run this Api from Tye
+- how we can test HTTP endpoints using the RestClient VS Code extension
 
 ### [Assignment 6 : Call the Weather API from the MAIL API](./docs/assignment-6.md)
 
-- add weatherforecast record to mail api
-- call weatherapi from mail api using DAPR service invocation
-- put the first returned weather summary to the body of the email
-- check dashboards
-  - jaeger
+In this assignment we will use the DAPR Service Invocation building block to call a the WeatherApi service from the MailApi service.
+
+After this assignment we know
+
+- how to add the weatherforecast return type record 
+- how we can call the weatherapi from the mailapi using the DAPR SDK and the service invocation building block
+- how to get a forecast from the result and put it in the mail to be sent
+

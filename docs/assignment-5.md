@@ -62,6 +62,10 @@ Check the dashboard of:
 
 You can see that consul and mailapi and weatherapi are correctly running
 
+- Tye on http://127.0.0.1:8000
+
+You can see that all services including the weatherapi are correctly running
+
 - Jaeger on http://127.0.0.1:16686/
 
 In Jaeger UI you select the weatherapi service and see the DAPR service invocation call you just did from the test.http file.
