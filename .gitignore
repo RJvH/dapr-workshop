@@ -37,6 +37,7 @@ logs.json
 /packages
 
 otelcontribcol_windows_amd64.exe
+otelcol-contrib.exe
 consul.exe
 process_store
 vault.exe
