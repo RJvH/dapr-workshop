@@ -177,7 +177,7 @@ Within VS Code you will see a 'Send Request' button rendered above each test:
 
 Execute both tests and check the results.
 
-### Step 7. Check the dashboard
+### Step 7. Check the dashboards
 Every minute DAPR will execute the cron job. It invokes the input binding which executes our cronmail endpoint. This endpoint creates an email and sends it using the DAPR SMTP outpub binding to MailHog.
 
 Check the dashboard of:
