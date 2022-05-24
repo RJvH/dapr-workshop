@@ -23,29 +23,31 @@ The following services will be setup:
 ### Step 1. Add services to Tye and run them
 Start the following executalabes from the tools directory by defining them as a service in the tye.yaml file.
 
-| name | arguments | http port |
-|---|----|---|
-|consul|```agent --dev```|8500|
-|otel|```--config ../src/otel.yaml```|n/a|
-|jaeger|```--config-file ../src/jaeger.yaml --log-level debug```|16686|
-|mailhog|n/a|8025|
+| name | executable | arguments | http port |
+|---|---|----|---|
+|consul|consul.exe|```agent --dev```|8500|
+|otel|otelcol-contrib.exe|```--config ../src/otel.yaml```|n/a|
+|jaeger|jaeger-all-in-one.exe|```--config-file ../src/jaeger.yaml --log-level debug```|16686|
+|mailhog|MailHog_windows_amd64.exe|n/a|8025|
 
 Make sure that:
-- the executable path is: ```../../../tools/example.exe```
+- the executable path is: ```../../../tools/<executable>.exe```
 - the working directory of each service is: ```../../../tools/```
 - replicas is set to: ```1```
 
 An example 'executable' Tye service:
 
+(replace the placeholders with the values from the table above)
+
 ```yaml
 services:
-- name: example
-  executable: ../../../tools/<example>.exe 
-  args: <put-your-arguments-here>
+- name: <name>
+  executable: ../../../tools/<executable>.exe 
+  args: <arguments>
   replicas: 1 
   workingDirectory: ../../../tools/
   bindings: 
-  - port: <your-http-port>
+  - port: <http port>
     protocol: http
 ```
 

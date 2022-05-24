@@ -61,12 +61,14 @@ This Dapr and Tye workshop consists of several assignments. The start of each as
 
 ### 1. Run dapr init
 
-- run ```dapr.exe uninstall``` first when upgrading dapr!  
+Open a command or powershell prompt and go to the Tools directory
+
+- run ```dapr.exe uninstall``` first (only when upgrading dapr!)  
 - run ```dapr.exe init --slim``` in tools dir  
   
 ### 2. Install tye
 
-- ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
+- run ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
 
 ### 3. Install VS code extensions
 
