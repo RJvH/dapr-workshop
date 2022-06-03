@@ -98,10 +98,14 @@ internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary
 Press F5 :)
 
 ### Step 5. Check the dashboards
-
+ 
+ In the trace you can see that the mailapi is now calling the weatherapi!
 
 ![jaeger](../docs/images/assignment6_jaeger.png)
 
+And the mails are being sent and received!
+
 ![mailhog](../docs/images/assignment6_mailhog_mail.png)
 
+You have done it!
 
