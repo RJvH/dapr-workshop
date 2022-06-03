@@ -102,18 +102,21 @@ Open a command or powershell prompt and go to the Tools directory
 - run ```dapr.exe uninstall``` first (only when upgrading dapr!)  
 - run ```dapr.exe init --slim``` in tools dir  
   
-### 2. Install tye
+### 2. Install .NET 6
+
+Go to https://dotnet.microsoft.com/en-us/download and download & install the SDK
+
+### 3. Install Tye
 
 - run ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
 
-### 3. Install VS code extensions
+### 4. Install VS code extensions
 
 - [Tye plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-tye)
 - [database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2)
 - [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
-
-### 4. Powershell
+### 5. Powershell
 
 Install powershell
 
