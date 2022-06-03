@@ -1,7 +1,43 @@
-# Dapr workshop
+# Let's TYE it together: an introduction to building micro services using DAPR
 
-This Dapr workshop focuses on setting op a micro-services architecture running on your local computer using Project Tye and Dapr without having the need to setup a local kubernetes cluster and can be run without docker. 
+This Dapr and Tye workshop focuses on setting op a micro-services architecture running on your local computer using Project Tye and Dapr without having the need to setup a local kubernetes cluster and can be run without docker. 
 
+## Project Tye
+```"Tye is a developer tool that makes developing, testing, and deploying microservices and distributed applications easier. Project Tye includes a local orchestrator to make developing microservices easier and the ability to deploy microservices to Kubernetes with minimal configuration."```
+
+https://github.com/dotnet/tye
+
+We will use Project Tye for the developing and test part.
+
+## Dapr
+Full documentation is available at https://dapr.io/
+
+### Overview
+What is Dapr?
+
+```"Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks. Leveraging the benefits of a sidecar architecture, Dapr helps you tackle the challenges that come with building microservices and keeps your code platform agnostic." ```
+
+
+https://docs.dapr.io/concepts/overview/
+
+![dapr overview](./docs/images/dapr_overview.png)
+
+
+### Building blocks
+
+```"There are many considerations when architecting microservices applications. Dapr provides best practices for common capabilities when building microservice applications that developers can use in a standard way, and deploy to any environment. It does this by providing distributed system building blocks."```
+
+https://docs.dapr.io/concepts/building-blocks-concept/
+
+![dapr building blocks](./docs/images/dapr_building_blocks.png)
+
+### Sidecar pattern
+
+```"Dapr exposes its HTTP and gRPC APIs as a sidecar architecture, either as a container or as a process, not requiring the application code to include any Dapr runtime code. This makes integration with Dapr easy from other runtimes, as well as providing separation of the application logic for improved supportability"```
+
+![dapr sidecar](./docs/images/dapr_overview-sidecar-model.png)
+
+### Dapr in this workshop
 In this workshop you will be using the following Dapr building blocks:
 
 - Service Invocation
