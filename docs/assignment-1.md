@@ -5,7 +5,7 @@ In this assignment we will create the solution outline. We will create a Tye YAM
 
 After this assignment we know
 
-- how te define and run 'executables' from within Project Tye
+- how to define and run 'executables' from within Project Tye
 
 The following services will be setup:
 
@@ -21,7 +21,7 @@ The following services will be setup:
 - Open the assignment-1 VS Code workspace from the workspaces folder using "File > Open Workspace from File"
 
 ### Step 1. Add services to Tye and run them
-Start the following executalabes from the tools directory by defining them as a service in the tye.yaml file.
+Start the following executables from the tools directory by defining them as a service in the tye.yaml file.
 
 | name | executable | arguments | http port |
 |---|---|----|---|
@@ -57,7 +57,7 @@ Now run by Tye pressing F5 or choose 'Launch Tye' on the 'Run an Debug' window (
 
 Open your browser and go to the Tye dashboard: http://127.0.0.1:8000/
 
-You wil see:
+You will see:
 ![tye services](../docs/images/assignment1_tye_services.png)
 
 ### Step 3. Inspect the Consul, Jaeger and MailHog dashboards

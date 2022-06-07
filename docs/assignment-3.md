@@ -39,7 +39,7 @@ spec:
   - name: schedule
     value: "@every 1m" # valid cron schedule
 ```
-- smtp output binding file named 'bindings.smtp.mailhog.yaml'
+- SMTP output binding file named 'bindings.smtp.mailhog.yaml'
 ```yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
@@ -68,7 +68,7 @@ auth:
   secretStore: dapr-secrets
 ```
 
-- secret store compponent file named 'secretstores.local.file.yaml'
+- secret store component file named 'secretstores.local.file.yaml'
 ```yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
@@ -107,7 +107,7 @@ Open the Tye.yaml file. Add the MailApi service to a new 'APIs' section undernea
 
 Right click in the 'src' folder and choose 'Open in Integrated Terminal'
 
-A new terminal window (propably Powershell) will be opened with 'assignment-3' as the working directory.
+A new terminal window (probably Powershell) will be opened with 'assignment-3' as the working directory.
 
 Now add the package reference using this command from the terminal:
 
@@ -152,7 +152,7 @@ Add two http tests to this file:
 ### test cronmail service invocation
 POST http://localhost:3500/v1.0/invoke/mailapi/method/cronmail HTTP/1.1
 ```
-2. test Dapr smtp output binding
+2. test Dapr SMTP output binding
 ```http
 ### test smtp output binding
 POST http://localhost:3500/v1.0/bindings/dapr-smtp HTTP/1.1
@@ -178,7 +178,7 @@ Within VS Code you will see a 'Send Request' button rendered above each test:
 Execute both tests and check the results.
 
 ### Step 7. Check the dashboards
-Every minute Dapr will execute the cron job. It invokes the input binding which executes our cronmail endpoint. This endpoint creates an email and sends it using the Dapr SMTP outpub binding to MailHog.
+Every minute Dapr will execute the cron job. It invokes the input binding which executes our cronmail endpoint. This endpoint creates an email and sends it using the Dapr SMTP output binding to MailHog.
 
 Check the dashboard of:
 - Consul on http://127.0.0.1:8500/ 
@@ -201,7 +201,7 @@ In Jaeger UI you can the cronmail endpoint call by the Dapr cron job. You also s
 
 ![jaeger](../docs/images/assignment3_jaeger.png)
 
-- Mailhog on http://localhost:8025/
+- MailHog on http://localhost:8025/
 
 You can see that emails are received from the cron job AND the REST client extension
  ![mailhog](../docs/images/assignment3_mailhog.png)

@@ -1,6 +1,6 @@
 # Let's TYE it together: an introduction to building micro services using DAPR
 
-This Dapr and Tye workshop focuses on setting op a micro-services architecture running on your local computer using Project Tye and Dapr without having the need to setup a local kubernetes cluster and can be run without docker. 
+This Dapr and Tye workshop focuses on setting up a micro-services architecture running on your local computer using Project Tye and Dapr without having the need to setup a local Kubernetes cluster and can be run without Docker. 
 
 ## Project Tye
 >Tye is a developer tool that makes developing, testing, and deploying microservices and distributed applications easier. Project Tye includes a local orchestrator to make developing microservices easier and the ability to deploy microservices to Kubernetes with minimal configuration.
@@ -48,7 +48,7 @@ We will use Tye to run all components, including the Dapr sidecars, the workload
 
 We will create two micro services: a Mail Api and a Weather API where the first will be triggered by Dapr using a cron job and it will call the second using Dapr service invocation.
 
-After having done all assigments, the final state of this workhop will be:
+After having done all assignments, the final state of this workshop will be:
 
 ![architecture](./docs/images/architecture.excalidraw.svg)
 
@@ -57,9 +57,9 @@ After having done all assigments, the final state of this workhop will be:
 2. [Dapr Secrets Management](https://docs.dapr.io/developing-applications/building-blocks/secrets/)
     We will retrieve secrets using Secrets Management and will swap the secret store being used
 3. [Dapr Consul name resolution](https://docs.dapr.io/reference/components-reference/supported-name-resolution/setup-nr-consul/)
-    Dapr will register the workload service using the Consul name resolition component
+    Dapr will register the workload service using the Consul name resolution component
 4. [Dapr Distributed Tracing](https://docs.dapr.io/developing-applications/building-blocks/observability/tracing-overview/)
-    We will configure DAPR to use zipkin formatted traces and send them to the OpenTelemetry Collector
+    We will configure DAPR to use Zipkin formatted traces and send them to the OpenTelemetry Collector
 5. [Dapr Input Bindings](https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/)
     We will use the DAPR cron input binding to trigger calls to the MailApi service
 6. [Consul checks](https://www.consul.io/docs/discovery/checks)
@@ -95,18 +95,18 @@ This Dapr and Tye workshop consists of several assignments. The start of each as
 - Otel: https://github.com/open-telemetry/opentelemetry-collector-releases/releases/ (Download the latest otelcol-contrib tar.gz file )
 
 
-### 1. Run dapr init
+### 1. Run Dapr init
 
 Open a command or powershell prompt and go to the Tools directory
 
-- run ```dapr.exe uninstall``` first (only when upgrading dapr!)  
-- run ```dapr.exe init --slim``` in tools dir  
+- run ```dapr.exe uninstall``` first (only when upgrading Dapr!)  
+- run ```dapr.exe init --slim``` in tools directory  
   
 ### 2. Install .NET 6
 
 Go to https://dotnet.microsoft.com/en-us/download and download & install the SDK
 
-### 3. Install Tye
+### 3. Install Project Tye
 
 - run ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
 
@@ -128,7 +128,7 @@ In this assignment we will create the solution outline. We will create a Tye YAM
 
 After this assignment we know
 
-- know how te define and run 'executables' from within Project Tye
+- know how to define and run 'executables' from within Project Tye
 
 ### [Assignment 2 : Create the Mail API](./docs/assignment-2.md)
 
@@ -181,7 +181,7 @@ In this assignment we will use the Dapr Service Invocation building block to cal
 
 After this assignment we know
 
-- how to add the weatherforecast return type record 
+- how to add the weather forecast return type record 
 - how we can call the weatherapi from the mailapi using the Dapr SDK and the service invocation building block
 - how to get a forecast from the result and put it in the mail to be sent
 

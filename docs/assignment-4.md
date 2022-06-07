@@ -22,7 +22,7 @@ After this assignment we know
 Let's open a terminal. 
 Right click in the 'src' folder and choose 'Open in Integrated Terminal'
 
-A new terminal window (propably Powershell) will be opened with 'assignment-4' as the working directory.
+A new terminal window (probably Powershell) will be opened with 'assignment-4' as the working directory.
 
 ### Step 2. Create new minimal ASP.NET WebApi Project
 

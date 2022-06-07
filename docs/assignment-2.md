@@ -25,7 +25,7 @@ Right click in the 'src' folder and choose 'Open in Integrated Terminal'
 
 ![open terminal](../docs/images/assignment2_open_terminal.png)
 
-A new terminal window (propably Powershell) will be opened with 'assignment-2' as the working directory.
+A new terminal window (probably Powershell) will be opened with 'assignment-2' as the working directory.
 
 
 ### Step 2. Create new ASP.NET Project
@@ -73,7 +73,7 @@ app.MapHealthChecks("/health");
 
 
 ### Step 4. Create the POST cronmail endpoint
-Add the POST cronnail operation
+Add the POST cronmail operation
 ```c#
 app.MapPost("/cronmail", async () =>
 {

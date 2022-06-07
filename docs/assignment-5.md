@@ -51,7 +51,7 @@ GET http://localhost:3501/v1.0/invoke/weatherapi/method/weatherforecast HTTP/1.1
 GET http://localhost:5201/weatherforecast HTTP/1.1
 ```
 
-Within VS Code you will see a 'Send Request' button rendered above each tes.
+Within VS Code you will see a 'Send Request' button rendered above each test.
 
 Execute both tests and check the results.
 
