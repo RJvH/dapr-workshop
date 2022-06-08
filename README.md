@@ -185,3 +185,10 @@ After this assignment we know
 - how we can call the weatherapi from the mailapi using the Dapr SDK and the service invocation building block
 - how to get a forecast from the result and put it in the mail to be sent
 
+### [Assignment 7 : Changed the secret store without a code change](./docs/assignment-7.md)
+
+In this assignment we will swap the Dapr secrets component from a file to environment variables. Both approaches are only recommend to be used within local development environments, in a real world example, the secret store could be changed to, for example, Azure keyvault.
+
+After this assignment we know
+
+- how to swap a Dapr component without changing the application code
