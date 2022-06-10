@@ -106,7 +106,7 @@ dotnet nuget source add c:\path-of-our-provided-packages
 Open a command or powershell prompt and go to the Tools directory
 
 - run ```dapr.exe uninstall``` first (only when upgrading Dapr!)  
-- run ```dapr.exe init --slim``` in tools directory  
+- run ```dapr.exe init --slim``` in tools directory  (in powershell .\dapr.exe)
   
 ### 2. Install .NET 6
 
@@ -118,6 +118,8 @@ Go to https://dotnet.microsoft.com/en-us/download and download & install the SDK
 - run ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
 
 ### 4. Install VS code extensions
+
+First install vscode if it's not yet on your machine (https://code.visualstudio.com/Download)
 
 - [Tye plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-tye)
 - [database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2)

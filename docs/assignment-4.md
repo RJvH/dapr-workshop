@@ -33,15 +33,18 @@ Create a new minimal ASP.NET WebApi Project with the name 'WeatherApi' using thi
 The new project will be scaffolded.
 
 Open the Program.cs class file and Remove this HSTS redirection line:
+
 ```c#
 app.UseHttpsRedirection();
 ```
 
 Add the health check service and map the health check in the Program.cs class:
+
 - builder.Services.AddHealthChecks();
 - app.MapHealthChecks("/health");
 
 Your Program.cs class now looks like:
+
 ```c#
 var builder = WebApplication.CreateBuilder(args);
 
@@ -100,6 +103,8 @@ Run the WeatherApi using this command from the terminal:
 Check that :
 - the Health endpoint is working : http://localhost:5201/health
 - the Swagger endpoint is working: http://localhost:5201/swagger/index.html
+
+If it does not work, kill all teminals and try again. 
 
 In the Swagger UI,
 1. click on GET /weatherforecast
