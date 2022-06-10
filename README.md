@@ -100,7 +100,7 @@ This Dapr and Tye workshop consists of several assignments. The start of each as
 Open a command or powershell prompt and go to the Tools directory
 
 - run ```dapr.exe uninstall``` first (only when upgrading Dapr!)  
-- run ```dapr.exe init --slim``` in tools directory  
+- run ```dapr.exe init --slim``` in tools directory  (in powershell .\dapr.exe)
   
 ### 2. Install .NET 6
 
