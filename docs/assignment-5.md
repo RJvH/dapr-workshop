@@ -18,7 +18,7 @@ After this assignment we know
 
 ### Step 1. Add Weather Api service to Tye and run it by using the bootstrap powershell script
 
-Open the Tye.yaml file. Add the MailApi service to the 'APIs' section underneath the 'Tools' section:
+Open the Tye.yaml file. Add the WeatherApi service to the 'APIs' section underneath the 'Tools' section:
 
 ```yaml
 - name: weatherapi
