@@ -37,6 +37,11 @@ Open the Program.cs class file and Remove this HSTS redirection line:
 app.UseHttpsRedirection();
 ```
 
+Add
+```c#
+builder.Services.AddHealthChecks();
+```
+
 Your Program.cs class now looks like:
 ```c#
 var builder = WebApplication.CreateBuilder(args);
@@ -96,6 +101,8 @@ Run the WeatherApi using this command from the terminal:
 Check that :
 - the Health endpoint is working : http://localhost:5201/health
 - the Swagger endpoint is working: http://localhost:5201/swagger/index.html
+
+If it does not work, kill all teminals and try again. 
 
 In the Swagger UI,
 1. click on GET /weatherforecast
