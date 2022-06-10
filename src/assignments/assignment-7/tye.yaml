@@ -34,8 +34,7 @@ services:
   bindings:
   - port: 8025
     protocol: http
-  env_file:
-  - ./envfile.env
+
 
 #APIs
 - name: mailapi
@@ -46,11 +45,7 @@ services:
   bindings:
   - protocol: http
     port: 5200
-  env_file:
-  - ./envfile.env
-  env:
-  - SharedName=MailAPipecifickey
-  - Mailapi_key=mailapi
+
 
 - name: weatherapi
   executable: powershell.exe 
@@ -60,6 +55,3 @@ services:
   bindings:
   - protocol: http
     port: 5201
-  env:
-  - name: SharedName
-    value: WeatherAPipecifickey
