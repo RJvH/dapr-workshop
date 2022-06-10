@@ -22,10 +22,13 @@ After this assignment we know
 - Open the assignment-3 VS Code workspace from the workspaces folder using "File > Open Workspace from File"
 
 ### Step 1. Add DAPR components
+
 Create a 'dapr-components' folder within the 'src' folder of this workspace.
 
 Add the following yaml files to this new directory:
+
 -  cron input binding file named 'bindings.cron.email.yaml'
+
 ```yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
@@ -39,7 +42,9 @@ spec:
   - name: schedule
     value: "@every 1m" # valid cron schedule
 ```
+
 - SMTP output binding file named 'bindings.smtp.mailhog.yaml'
+
 ```yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
@@ -69,6 +74,7 @@ auth:
 ```
 
 - secret store component file named 'secretstores.local.file.yaml'
+
 ```yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
@@ -117,11 +123,13 @@ Now add the package reference using this command from the terminal:
 
 Open the Program.cs
 Add the following using statement:
+
 ```c#
 using Dapr.Client;
 ```
 
 Change the cronmail endpoint so it sends an email using the Dapr output binding:
+
 ```c#
 app.MapPost("/cronmail", async () =>
 {
@@ -141,18 +149,24 @@ app.MapPost("/cronmail", async () =>
 ```
 
 ### Step 5. Run the Tye solution
+
 Press F5 :)
 
 ### Step 6. Test endpoints using REST Client extension
+
 Create a new 'test.http' file in your 'src' folder
 
 Add two http tests to this file:
+
 1. test cronmail using Dapr service invocation
+
 ```http
 ### test cronmail service invocation
 POST http://localhost:3500/v1.0/invoke/mailapi/method/cronmail HTTP/1.1
 ```
+
 2. test Dapr SMTP output binding
+
 ```http
 ### test smtp output binding
 POST http://localhost:3500/v1.0/bindings/dapr-smtp HTTP/1.1
@@ -178,9 +192,11 @@ Within VS Code you will see a 'Send Request' button rendered above each test:
 Execute both tests and check the results.
 
 ### Step 7. Check the dashboards
+
 Every minute Dapr will execute the cron job. It invokes the input binding which executes our cronmail endpoint. This endpoint creates an email and sends it using the Dapr SMTP output binding to MailHog.
 
 Check the dashboard of:
+
 - Consul on http://127.0.0.1:8500/ 
 
 You can see that consul and mailapi are correctly running
@@ -195,7 +211,6 @@ You also see that the cronmail operation is invoking the Dapr SMTP output bindin
 ![mailapi](../docs/images/assignment3_mailapi.png)
 
 - Jaeger on http://127.0.0.1:16686/
-
 
 In Jaeger UI you can the cronmail endpoint call by the Dapr cron job. You also see the call to the Dapr SMTP output binding by the cronmail endpoint.
 
