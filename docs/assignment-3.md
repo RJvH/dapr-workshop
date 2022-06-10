@@ -197,7 +197,7 @@ You also see that the cronmail operation is invoking the Dapr SMTP output bindin
 - Jaeger on http://127.0.0.1:16686/
 
 
-In Jaeger UI you can the cronmail endpoint call by the Dapr cron job. You also see the call to the Dapr SMTP output binding by the cronmail endpoint.
+In Jaeger UI you can (see?) the cronmail endpoint call by the Dapr cron job. You also see the call to the Dapr SMTP output binding by the cronmail endpoint.
 
 ![jaeger](../docs/images/assignment3_jaeger.png)
 
