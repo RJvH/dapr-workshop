@@ -3,6 +3,7 @@
 This Dapr and Tye workshop focuses on setting up a micro-services architecture running on your local computer using Project Tye and Dapr without having the need to setup a local Kubernetes cluster and can be run without Docker. 
 
 ## Project Tye
+
 >Tye is a developer tool that makes developing, testing, and deploying microservices and distributed applications easier. Project Tye includes a local orchestrator to make developing microservices easier and the ability to deploy microservices to Kubernetes with minimal configuration.
 
 https://github.com/dotnet/tye
@@ -10,18 +11,18 @@ https://github.com/dotnet/tye
 We will use Project Tye for the developing and testing part.
 
 ## Dapr
+
 Full documentation is available at https://dapr.io/
 
 ### Overview
+
 What is Dapr?
 
 >Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks. Leveraging the benefits of a sidecar architecture, Dapr helps you tackle the challenges that come with building microservices and keeps your code platform agnostic.
 
-
 https://docs.dapr.io/concepts/overview/
 
 ![dapr overview](./docs/images/dapr_overview.png)
-
 
 ### Building blocks
 
@@ -38,6 +39,7 @@ https://docs.dapr.io/concepts/building-blocks-concept/
 ![dapr sidecar](./docs/images/dapr_overview-sidecar-model.png)
 
 ### Dapr in this workshop
+
 In this workshop we will be using the following Dapr building blocks:
 
 - Service Invocation
@@ -69,8 +71,6 @@ After having done all assignments, the final state of this workshop will be:
 8. [OpenTelemetry Collector Exporter](https://opentelemetry.io/docs/collector/configuration/#exporters)
     The OpenTelemetry Collector will send all received traces to Jaeger
 
-
-
 ## Workshop approach
 
 This Dapr and Tye workshop consists of several assignments. The start of each assignment, is the end of the previous assignment. The start of each assignment can be found in the assignments folder as well, this way it's possible to start the workshop at every assignment.
@@ -80,9 +80,16 @@ This Dapr and Tye workshop consists of several assignments. The start of each as
 ### 0. Prepare prerequisites
 
 #### Workshop with USB key
+
 - Copy folder structure from USB key to you hard drive
+- add the following path to your nuget sources list using the following command:
+
+```cmd
+dotnet nuget source add c:\path-of-our-provided-packages
+```
 
 #### Workshop without USB key
+
 - Clone this repo
 - Download the following tools and unzip/copy these executables into the Tools folder; your tools folder should look like this:
 
@@ -93,7 +100,6 @@ This Dapr and Tye workshop consists of several assignments. The start of each as
 - Jaeger: https://www.jaegertracing.io/download/ (Click on the Windows button within the Binaries section and download the tar.gz file)
 - MailHog: https://github.com/mailhog/MailHog/releases (Download the latest MailHog_windows_amd64.exe file)
 - Otel: https://github.com/open-telemetry/opentelemetry-collector-releases/releases/ (Download the latest otelcol-contrib tar.gz file )
-
 
 ### 1. Run Dapr init
 
@@ -108,6 +114,7 @@ Go to https://dotnet.microsoft.com/en-us/download and download & install the SDK
 
 ### 3. Install Project Tye
 
+- make sure that the nuget.org feed is in your sources list: ```dotnet nuget list source"
 - run ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
 
 ### 4. Install VS code extensions
