@@ -35,6 +35,8 @@ Make sure that:
 - the working directory of each service is: ```../../../tools/```
 - replicas is set to: ```1```
 
+(Suggestie: zorg dat deze yaml al gevuld is. Of misschien op de laatste na. Het is een beetje dom/kopieer plakwerk en kost veel tijd.)
+
 An example 'executable' Tye service:
 
 (replace the placeholders with the values from the table above)
