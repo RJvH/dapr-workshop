@@ -112,6 +112,8 @@ Go to https://dotnet.microsoft.com/en-us/download and download & install the SDK
 
 ### 4. Install VS code extensions
 
+First install vscode if it's not yet on your machine (https://code.visualstudio.com/Download)
+
 - [Tye plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-tye)
 - [database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2)
 - [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
