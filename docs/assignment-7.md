@@ -60,7 +60,7 @@ spec:
 In order to prevent naming conflicts, the name of the existing component must be changed.
 
 - Find the dapr component in ```\src\dapr-components\secertstores.local.file.yaml```
-- Change the "name" to: dapr-secerts-local-file
+- Change the "name" to: dapr-secrets-local-file
 
 ### Step 4. add environment variables to your dapr workloads in order to use secrets
 
