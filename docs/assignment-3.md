@@ -129,7 +129,7 @@ app.MapPost("/cronmail", async () =>
     var metadata = new Dictionary<string, string>
     {
         ["emailFrom"] = "noreply@dapr-workshop.local",
-        ["emailTo"] = "john.doe@dapr-worksip.local",
+        ["emailTo"] = "john.doe@dapr-workshop.local",
         ["subject"] = $"Mail from cron job"
     };
 
@@ -162,7 +162,7 @@ Content-Type: application/json
   "operation": "create",
   "metadata": {
     "emailFrom": "noreply@dapr-workshop.local",
-    "emailTo": "john.doe@dapr-worksip.local",
+    "emailTo": "john.doe@dapr-workshop.local",
     "emailCC": "cc1@example.net; cc2@example.net",
     "subject": "Mail from http test request"
   },

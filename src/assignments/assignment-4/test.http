@@ -9,7 +9,7 @@ Content-Type: application/json
   "operation": "create",
   "metadata": {
     "emailFrom": "noreply@dapr-workshop.local",
-    "emailTo": "john.doe@dapr-worksip.local",
+    "emailTo": "john.doe@dapr-workshop.local",
     "emailCC": "cc1@example.net; cc2@example.net",
     "subject": "Mail from http test request"
   },
