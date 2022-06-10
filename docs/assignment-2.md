@@ -49,6 +49,7 @@ Now add the package reference using this command from the terminal:
 Open the Program.cs file from the MailApi folder.
 
 Add the following 3 services to the builder before building the builder.
+
 ```c#
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -58,9 +59,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks();
 var app = builder.Build();
 ```
+
 Remove the ``` app.MapGet("/", () => "Hello World!"); ``` statement.
 
-After the ```app.Build``` command add this if-statement:
+After the ```app = builder.Build()``` command add this if-statement:
+
 ```c#
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -73,7 +76,9 @@ app.MapHealthChecks("/health");
 
 
 ### Step 4. Create the POST cronmail endpoint
+
 Add the POST cronmail operation
+
 ```c#
 app.MapPost("/cronmail", async () =>
 {
@@ -119,14 +124,15 @@ Run the MailApi using this command from the terminal:
 ```dotnet run --project MailApi```
 
 Check that :
+
 - the Health endpoint is working : http://localhost:5200/health
 - the Swagger endpoint is working: http://localhost:5200/swagger/index.html
 
 In the Swagger UI,
+
 1. click on POST /cronmail
 2. click the 'Try it out' button
 3. click on 'Execute'
 4. check that the response code is 200 and the body contains the string 'Working!'
-
 
 ![test](../docs/images/assignment2_app_test.png)
