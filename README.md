@@ -92,7 +92,7 @@ This Dapr and Tye workshop consists of several assignments. The start of each as
 - Dapr: https://github.com/dapr/cli/releases (Download the latest dapr_windows_amd64.zip file)
 - Jaeger: https://www.jaegertracing.io/download/ (Click on the Windows button within the Binaries section and download the tar.gz file)
 - MailHog: https://github.com/mailhog/MailHog/releases (Download the latest MailHog_windows_amd64.exe file)
-- Otel: https://github.com/open-telemetry/opentelemetry-collector-releases/releases/ (Download the latest otelcol-contrib tar.gz file )
+- Otel: https://github.com/open-telemetry/opentelemetry-collector-releases/releases/ (Download the latest windows amd64 otelcol-contrib tar.gz file )
 
 
 ### 1. Run Dapr init
