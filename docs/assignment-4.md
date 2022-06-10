@@ -37,6 +37,10 @@ Open the Program.cs class file and Remove this HSTS redirection line:
 app.UseHttpsRedirection();
 ```
 
+Add the health check service and map the health check in the Program.cs class:
+- builder.Services.AddHealthChecks();
+- app.MapHealthChecks("/health");
+
 Your Program.cs class now looks like:
 ```c#
 var builder = WebApplication.CreateBuilder(args);
