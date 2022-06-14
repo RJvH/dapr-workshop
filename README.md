@@ -113,6 +113,8 @@ Open a command or powershell prompt and go to the Tools directory
 
 Go to https://dotnet.microsoft.com/en-us/download and download & install the SDK
 
+> If you are working with a USB key, and have internet connection problems, the .Net 6 offline installer can be found in the binaries directory
+
 ### 3. Install Project Tye
 
 - make sure that the nuget.org feed is in your sources list: ```dotnet nuget list source"
@@ -130,6 +132,10 @@ First install vscode if it's not yet on your machine (https://code.visualstudio.
 
 - [Tye plugin](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-tye)
 - [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+> If you are working with a USB key, and have internet connection problems, the extensions can be found in the binaries directory. The VS Code extensions provide a way to install extensions offline:
+
+![offline installation vscode extensions](/docs/images/vscode-extensions.jpg)
 
 ### 5. Powershell
 
