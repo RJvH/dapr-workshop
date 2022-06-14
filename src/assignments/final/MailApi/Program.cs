@@ -31,7 +31,9 @@ app.MapPost("/cronmail", async () =>
 
     var result = await daprClient.InvokeMethodAsync<IEnumerable<WeatherForecast>>(HttpMethod.Get, "weatherapi", "weatherforecast");
 
-    string body = $"Wow, it's {result.FirstOrDefault().Summary}!";
+    var superSecretSecret = await daprClient.GetSecretAsync("dapr-secrets", "smtp.password");
+
+    string body = $"Wow, it's {result.FirstOrDefault().Summary}! - By the way, the super secret smtp password is {string.Join(", ", superSecretSecret)}";
 
     await daprClient.InvokeBindingAsync("dapr-smtp", "create", body, metadata);
 })

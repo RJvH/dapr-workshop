@@ -46,6 +46,8 @@ services:
   bindings:
   - protocol: http
     port: 5200
+  env_file:
+  - ./envfile.env
 
 - name: weatherapi
   executable: powershell.exe 

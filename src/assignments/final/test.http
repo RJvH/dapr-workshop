@@ -22,3 +22,10 @@ GET http://localhost:3501/v1.0/invoke/weatherapi/method/weatherforecast HTTP/1.1
 
 ### test direct weatherforecast  invocation
 GET http://localhost:5201/weatherforecast HTTP/1.1
+
+### test smtp secrets
+
+GET http://localhost:3500/v1.0/secrets/dapr-secrets/smtp.user HTTP/1.1
+
+### test smtp secrets
+GET http://localhost:3500/v1.0/secrets/dapr-secrets/smtp.password HTTP/1.1
