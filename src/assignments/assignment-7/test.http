@@ -1,0 +1,16 @@
+### test secret store
+
+GET http://localhost:3500/v1.0/secrets/dapr-secrets/smtp.user HTTP/1.1
+
+### Get all secrets for MailAPI
+
+GET http://localhost:3500/v1.0/secrets/dapr-secrets/SharedName HTTP/1.1
+
+### Get all secrets for WeatherAPI
+
+GET http://localhost:3501/v1.0/secrets/dapr-secrets/SharedName HTTP/1.1
+
+### show all secrets
+
+GET http://localhost:3501/v1.0/secrets/dapr-secrets/bulk HTTP/1.1
+

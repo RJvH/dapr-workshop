@@ -1,0 +1,13 @@
+name: dapr-workshop
+
+services:
+# Tools
+
+#- name: example
+#  executable: ../../../tools/<example>.exe 
+#  args: <put-your-arguments-here>
+#  replicas: 1 
+#  workingDirectory: ../../../tools/
+#  bindings: 
+#  - port: <your-http-port>
+#    protocol: http

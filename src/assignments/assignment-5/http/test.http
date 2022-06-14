@@ -1,0 +1,84 @@
+### test cronmail service invocation
+
+POST http://localhost:3500/v1.0/invoke/mailapi/method/cronmail HTTP/1.1
+
+### test weatherforecast service invocation
+
+GET http://localhost:3501/v1.0/invoke/weatherapi/method/weatherforecast HTTP/1.1
+
+### test smtp output binding
+
+POST http://localhost:3500/v1.0/bindings/dapr-smtp HTTP/1.1
+Content-Type: application/json
+
+{
+  "operation": "create",
+  "metadata": {
+    "emailFrom": "noreply@dapr-workshop.local",
+    "emailTo": "john.doe@dapr-workshop.local",
+    "emailCC": "cc1@example.net; cc2@example.net",
+    "subject": "Mail from http test request"
+  },
+  "data" : "test"
+
+}
+
+### test secret store
+
+GET http://localhost:3500/v1.0/secrets/dapr-secrets/smtp.user HTTP/1.1
+
+
+
+### test state store
+POST http://localhost:3500/v1.0/state/dapr-state HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+        "key" : "key",
+        "value" : "value",
+        "metadata": {
+            "ttlInSeconds": "120"
+        }
+    }
+]
+
+###
+POST http://localhost:3500/v1.0/state/dapr-state HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+        "key": "weapon",
+        "value" : "Death Star",
+        "metadata": {
+            "ttlInSeconds": "120"
+        }
+    },
+    {
+        "key": "planet",
+        "value" : {
+            "name" : "Tatooine"
+        },
+        "metadata": {
+            "ttlInSeconds": "120"
+        }
+    }
+]
+###
+GET http://localhost:3500/v1.0/state/dapr-state/planet HTTP/1.1
+###
+POST http://localhost:3500/v1.0/state/dapr-state/query HTTP/1.1
+Content-Type: application/json
+
+{
+    "query": {
+        "filter":{
+            "EQ": {"value.name" : "Tatooine"}
+        }
+    }
+}
+
+### test configuration store
+
+GET http://localhost:3500/v1.0/configuration/dapr-configuration/test HTTP/1.1

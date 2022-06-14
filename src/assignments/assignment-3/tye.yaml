@@ -1,0 +1,36 @@
+name: dapr-workshop
+
+services:
+# Tools
+- name: consul
+  executable: ../../../tools/consul.exe 
+  args: agent --dev 
+  replicas: 1 
+  workingDirectory: ../../../tools/
+  bindings: 
+  - port: 8500
+    protocol: http
+
+- name: otel
+  executable: ../../../tools/otelcol-contrib.exe   
+  args: --config ../src/otel.yaml 
+  replicas: 1 
+  workingDirectory: ../../../tools/
+
+- name: jaeger
+  executable: ../../../tools/jaeger-all-in-one.exe
+  args: --config-file ../src/jaeger.yaml --log-level debug
+  replicas: 1 
+  workingDirectory: ../../../tools/
+  bindings:
+  - port: 16686
+    protocol: http
+
+- name: mailhog
+  executable: ../../../tools/MailHog_windows_amd64.exe
+  args:
+  replicas: 1
+  workingDirectory: ../../../tools/
+  bindings:
+  - port: 8025
+    protocol: http

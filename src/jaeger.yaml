@@ -1,0 +1,3 @@
+collector:
+  zipkin:
+    host-port: "9412"
