@@ -81,11 +81,12 @@ This Dapr and Tye workshop consists of several assignments. The start of each as
 
 #### Workshop with USB key
 
-- Copy folder structure from USB key to you hard drive
-- add the following path to your nuget sources list using the following command:
+- Copy folder structure from USB key to you hard drive.
+- We have provided all required nuget packages: restore the nuget packages from our directory to your local cache using the following command
 
 ```cmd
-dotnet nuget source add c:\path-of-our-provided-packages
+cd x:\location-of-workshop\dapr-workshop\src\mailapi\
+dotnet restore -s x:\location-of-workshop\workshoppackages
 ```
 
 #### Workshop without USB key
@@ -116,6 +117,12 @@ Go to https://dotnet.microsoft.com/en-us/download and download & install the SDK
 
 - make sure that the nuget.org feed is in your sources list: ```dotnet nuget list source"
 - run ```dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"```
+
+> If you are working with a USB key, and have internet connection problems, the following command can be used:
+
+> ```cmd
+> dotnet tool install -g --add-source "x:\location-of-workshop\workshoppackages" microsoft.tye --version "0.11.0-alpha.22111.1"
+> ```
 
 ### 4. Install VS code extensions
 
