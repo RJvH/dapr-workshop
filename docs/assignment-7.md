@@ -15,7 +15,10 @@ After this assignment we know
 - Open VS Code
 - Open the assignment-7 VS Code workspace from the workspaces folder using "File > Open Workspace from File"
 
-### Step 1. Find the secret value that is currently in use
+### Step 1. Run the Tye solution
+Press F5 :)
+
+### Step 2. Find the secret value that is currently in use
 
 open ```test.http``` and find the test for the secret store:
 
@@ -39,7 +42,7 @@ Connection: close
 }
 ```
 
-### Step 2. Make use of the DAPR SDK to read the secrets in code
+### Step 3. Make use of the DAPR SDK to read the secrets in code
 
 Find the line within Program.cs in the MailAPI project where the mailbody is created (line 35):
 
@@ -57,7 +60,7 @@ string body = $"Wow, it's {result.FirstOrDefault().Summary}! - By the way, the s
 This code gets the super secret smtp password from the secret building block and this secret will be injected in the mail body. When this code is executed, you will receive a mail which contains the smtp password which has been defined in the ```secrets.json```
 
 
-### Step 3. Change the Dapr secrets component from file to environments variable
+### Step 4. Change the Dapr secrets component from file to environments variable
 
 Add a new file called ```secretstores.local.env.yaml```. Add the following content to it:
 
@@ -73,14 +76,14 @@ spec:
   metadata:
 ```
 
-### Step 4. Change the name of the local file secret store
+### Step 5. Change the name of the local file secret store
 
 In order to prevent naming conflicts, the name of the existing component must be changed.
 
 - Find the dapr component in ```\src\dapr-components\secretstores.local.file.yaml```
 - Change the "name" to: dapr-secrets-local-file (the value in the file, not the filename)
 
-### Step 5. add environment variables to your dapr workloads in order to use secrets
+### Step 6. add environment variables to your dapr workloads in order to use secrets
 
 Environment variables can be specified in various ways:
 
@@ -134,7 +137,7 @@ In order to add environment variables, take the following steps:
     value: MailAPipecifickey
   ```
 
-### Step 6. Find the new secret values
+### Step 7. Find the new secret values
 
 restart tye. Using the same http test, another secret value (which resides in the envfile.env) should be shown.
 
