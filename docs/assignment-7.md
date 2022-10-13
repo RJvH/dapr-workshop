@@ -121,7 +121,7 @@ In order to add environment variables, take the following steps:
   env_file:
   - ./envfile.env
   env:
-  - SharedName=MailAPipecifickey
+  - SharedName=MailAPISpecificKey
   - Mailapi_key=mailapi
   ```
 
@@ -131,7 +131,7 @@ In order to add environment variables, take the following steps:
   ```yaml
   env:
   - name: SharedName
-    value: MailAPipecifickey
+    value: WeatherAPISpecificKey
   ```
 
 ### Step 6. Find the new secret values
